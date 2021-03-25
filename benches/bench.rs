@@ -22,8 +22,12 @@ fn human_readable_size(size_bytes: usize) -> String {
 }
 
 // Powers of 2u32 limits for measurements
+// 10 = 1 kB, 20 = 1 MB
+// 24 = 16 MB = L3 cache size on test platform
+// 26 = 64 MB = target
+// 30 = 1 GB
 const START_POW: u32 = 10;
-const END_POW: u32 = 20;
+const END_POW: u32 = 26;
 const STEP_POW: u32 = 2;
 
 // Top level measurement organizers
