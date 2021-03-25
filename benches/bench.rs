@@ -203,6 +203,9 @@ fn compare_data_structures(start_pow2: u32, end_pow2: u32, step_pow2: u32, c: &m
 
     let mut input_size_bytes = 2u32.pow(start_pow2) as usize;
     while input_size_bytes <= 2u32.pow(end_pow2) as usize {
+        // Give input length in bytes to configure criterion
+        group.throughput(criterion::Throughput::Bytes(input_size_bytes as u64));
+
         // A 64-bit float is 8 bytes long, so we divide 1024 by 8 bytes to obtain the right data length
         let data_len = input_size_bytes / std::mem::size_of::<f64>();
         let par_name = human_readable_size(input_size_bytes);
