@@ -18,3 +18,17 @@ where
 {
     collection.into_iter().map(|x| x.0.powi(2)).sum::<f64>()
 }
+
+/// Sum the square of each input value, referencing the data-structure
+/// immutably.
+///
+/// Takes a reference to a collection. The reference is transformed into an
+/// iterator over references to the original values in collection. This iterator
+/// is mapped to produce the square of each input value. The subsequent iterator
+/// is then accumulated to a single 'sum' value.
+pub fn sum_of_squares_by_ref<T>(collection: &T) -> f64
+where
+    for<'a> &'a T: iter::IntoIterator<Item = &'a FloatOrd<f64>>,
+{
+    collection.into_iter().map(|x| x.0.powi(2)).sum::<f64>()
+}
