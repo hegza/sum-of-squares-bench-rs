@@ -1,13 +1,3 @@
-/*
-- RQ1: For sum of squares, how does the performance of each data structure compare against the others?
-    - H1.1 Data structures stored as a contiguent array have equal performance. The compiler should be able to optimize these functionally equivalent implementations equally well.
-    - H1.2 Data structures stored non-contiguently perform worse than those with contiguent storage. This is because the non-contiguent data structures cause more cache misses.
-- RQ2: Does the size of the data-structure affect the performance?
-    - H2.1 The size of the array should have an approximately linear relationship with processing time with some discontinuity at thresholds corresponding to the various cache sizes on the computer under testing.
-- RQ3: Does it make a difference in measurement if the parameter is received by move vs. by reference.
-    - H3.1 It makes no difference since input values are only read. Care must be taken to make sure that dropping the input value is not added to measurement overhead.
-*/
-
 use float_ord::FloatOrd;
 use std::{hash, iter};
 
