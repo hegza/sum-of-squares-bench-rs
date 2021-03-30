@@ -1,5 +1,3 @@
-// TODO: measure "sum of squares" for:
-// Vec, VecDeque, LinkedList, HashSet, BTreeSet
 /*
 - RQ1: For sum of squares, how does the performance of each data structure compare against the others?
     - H1.1 Data structures stored as a contiguent array have equal performance. The compiler should be able to optimize these functionally equivalent implementations equally well.
