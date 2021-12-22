@@ -4,6 +4,14 @@ edition = "2018"
 name = "spp-experiments"
 version = "0.1.0"
 
+[lib]
+name = "spp_experiments"
+path = "src/lib.rs"
+
+[[bin]]
+name = "spp_experiments_bin"
+path = "src/main.rs"
+
 [dependencies]
 criterion = "0.3.4"
 float-ord = "0.2.0"
